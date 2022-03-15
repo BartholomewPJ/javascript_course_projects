@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital@0;1&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1039%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='rgba(41%2c 41%2c 41%2c 1)'%3e%3c/rect%3e%3cpath d='M81 1080L1161 0L1312.5 0L232.5 1080z' fill='url(%23SvgjsLinearGradient1040)'%3e%3c/path%3e%3cpath d='M706.6 1080L1786.6 0L2478.1 0L1398.1 1080z' fill='url(%23SvgjsLinearGradient1040)'%3e%3c/path%3e%3cpath d='M1834 1080L754 0L-21.5 0L1058.5 1080z' fill='url(%23SvgjsLinearGradient1041)'%3e%3c/path%3e%3cpath d='M1218.4 1080L138.4000000000001 0L-754.0999999999999 0L325.9000000000001 1080z' fill='url(%23SvgjsLinearGradient1041)'%3e%3c/path%3e%3cpath d='M846.6703574318819 1080L1920 6.670357431881939L1920 1080z' fill='url(%23SvgjsLinearGradient1040)'%3e%3c/path%3e%3cpath d='M0 1080L1073.329642568118 1080L 0 6.670357431881939z' fill='url(%23SvgjsLinearGradient1041)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1039'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1040'%3e%3cstop stop-color='rgba(75%2c 87%2c 114%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(75%2c 87%2c 114%2c 1)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1041'%3e%3cstop stop-color='rgba(75%2c 87%2c 114%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(75%2c 87%2c 114%2c 1)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+h1 {
+	margin: 50px 0 30px;
+	text-align: center;
+	color: honeydew;
+}
+
+.faq-container {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.faq {
+	background-color: darkred;
+	border: 1px solid #700505;
+	border-radius: 0;
+	margin: 20px 0;
+	padding: 30px;
+	position: relative;
+	overflow: hidden;
+	transition: all 0.3s ease;
+	font-weight: 200;
+	/* transform: skew(-10deg); */
+}
+
+.faq.active {
+	background-color: darkred;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.faq::before,
+.faq::after {
+	content: "\f075";
+	font-family: "Font Awesome 5 Free";
+	color: #055526;
+	font-size: 7rem;
+	position: absolute;
+	opacity: 0.2;
+	top: 20px;
+	left: 20px;
+	z-index: 0;
+}
+
+.faq::before {
+	color: #062f4b;
+	top: -10px;
+	left: -30px;
+	transform: rotateY(180deg);
+}
+
+.faq-title {
+	margin: 0 35px 0 0;
+	color: white;
+	font-size: 16px;
+	/* transform: skew(10deg); */
+}
+
+.faq-text {
+	display: none;
+	margin: 30px 100px 0;
+	color: rgb(201, 234, 247);
+	font-size: 20px;
+	/* transform: skew(10deg); */
+}
+
+.faq.active .faq-text {
+	display: block;
+}
+
+.faq-toggle {
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	padding: 0;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	transform: skew(10deg);
+}
+
+.faq-toggle:focus {
+	outline: 0;
+	box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.fa-times,
+.fa-chevron-down {
+	color: white;
+}
+
+.faq-toggle .fa-times {
+	display: none;
+}
+
+.faq.active .faq-toggle .fa-times {
+	display: block;
+	color: white;
+}
+
+.faq.active .faq-toggle .fa-chevron-down {
+	display: none;
+}
+
+.faq.active .faq-toggle {
+	background-color: #4b5772;
+}
